@@ -26,6 +26,8 @@ from tkinter import *
 widget = Label(None, text = 'i love python!')
 widget.pack()
 
+print(dir(tkinter))
+
 import tkinter
 tkinter.widget = tkinter.label(None, text = 'i love python!')
 tkinter.widget.pack()

@@ -1,10 +1,6 @@
-L = int(input())
-A = list(range(2,L))
-print(A)
-
-for i in A:
-    if i<3:
-        i+=i
-    elif i%2 = 0
-
-미완성
+num = int(input())
+for i in range(2,num):
+    if num % i == 0:
+        ('소수가 아닙니다!')
+    else:
+        ('소수입니다!')

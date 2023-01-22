@@ -6,12 +6,12 @@ dic['dictionary']
 print(dic)
 print(dic['dictionary'])
 
-smalldic = {'dictionary': 'reference', 'python': 'snake'}
-print(smalldic)
-print(smalldic['python'])
+smalldict = {'dictionary': 'reference', 'python': 'snake'}
+print(smalldict)
+print(smalldict['python'])
 
-del smalldic['dictionary']
-print(smalldic)
+del smalldict['dictionary']
+print(smalldict)
 
 
 family = {'boy':'choi','girl':'kim','baby':'choi'}

@@ -26,3 +26,5 @@ print(list(i))
 
 o = filter(lambda x:(x+1)%2, range(10))
 print(list(o))
+
+

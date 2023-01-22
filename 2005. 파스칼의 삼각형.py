@@ -28,7 +28,7 @@ for l in range(int(input())):
     list_2 = [1] # 뒤쪽 계산
     save_list = [1] # 결과물 저장소
 
-# for t in range(int(input())): # 0~9
-#     print(f'#{t+1}')
-#     for i in range(int(input())): 
-#         print(' '.join(str(11**i)))       
+for t in range(int(input())): # 0~9
+    print(f'#{t+1}')
+    for i in range(int(input())): 
+        print(' '.join(str(11**i)))       

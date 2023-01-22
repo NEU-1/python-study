@@ -23,11 +23,11 @@ while True:
     print(q)
     a = input('\nyour answer: ')
 
-    if a == d[q].rstrip():
+    if a == dic[q].rstrip():
         print('\nresult: Correct!')
     else:
         print('\nresult: Not correct!')
-        print('right answer:' + d[q].rstrip() + '\n')
+        print('right answer:' + dic[q].rstrip() + '\n')
 
     input()
 
