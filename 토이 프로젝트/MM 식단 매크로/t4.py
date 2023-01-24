@@ -1,5 +1,8 @@
 # _*_ coding: utf-8 _*_
 
+from urllib import request # 사진
+from PIL import Image # 사진
+from io import BytesIO # 사진
 import requests
 import datetime
 import time
@@ -8,6 +11,15 @@ import time
 period = 5  # 탐색 주기(초)
 # --------------------------------------------------
 
+def picture():
+    url = 'https://item.kakaocdn.net/do/f26523b6d699852ace4f3c49f086f7a4617ea012db208c18f6e83b1a90a7baa7'
+
+    res = request.urlopen(url).read()
+    img = Image.open(BytesIO(res))
+    return img
+print(picture())
+
+
 def menuprint():
     url = 'https://meeting.ssafy.com/hooks/xejboqkqr3n6zkdkke3k633jiw'
 
@@ -15,8 +27,10 @@ def menuprint():
     headers = {'Content-Type': 'application/json', }
     menu_1 = todaymenu('2')
     menu_2 = todaymenu('3')
+    global picture
+    picture = picture()
     # # (f'http://samsungwelstory.com/data/manager/recipe/E21F/{now}/') # 식사 이미지 아이콘 링크
-    values = '{ "username": "Menu-Bot","text": "### 오늘 점심 메뉴\n' + menu_1 +'\n![이미지테스트](https://recipe1.ezmember.co.kr/cache/recipe/2020/07/05/2e0e7c019f283bcc36d34cdee876d15b1.jpg)\n ### 오늘 저녁 메뉴\n'+ menu_2 +'"}'
+    values = '{ "username": "Menu-Bot","text": "### 오늘 점심 메뉴\n' + menu_1 + '\n ### 오늘 저녁 메뉴\n' + menu_2 + '\n", picture}'
     response = requests.post('https://meeting.ssafy.com/hooks/e6qs4hmou7nxpm5e1x66xddjnh', data=values.encode('utf-8'))
 
 def todaymenu(time):
