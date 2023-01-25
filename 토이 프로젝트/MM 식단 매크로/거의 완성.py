@@ -20,8 +20,8 @@ def menuprint():
     response = requests.post('https://meeting.ssafy.com/hooks/e6qs4hmou7nxpm5e1x66xddjnh', data=values.encode('utf-8'))
 
 def todaymenu(time):
-    # now = datetime.datetime.today().strftime("%Y%m%d") # 오늘 날짜 코드
-    now = datetime.date(2023, 1, 20).strftime("%Y%m%d") # 지정 날짜 코드
+    now = datetime.datetime.today().strftime("%Y%m%d") # 오늘 날짜 코드
+    # now = datetime.date(2023, 1, 20).strftime("%Y%m%d") # 지정 날짜 코드
     cookies = {
         'remember-me': 'Y2pzcmhkODgyOjI2MjA1NDA3OTM2NTY6NzIwM2RkMzY1YzNhMWQ4MGE4NzRhOTNkYjJiN2FkOTY',
     }
