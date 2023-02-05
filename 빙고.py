@@ -54,3 +54,38 @@ for y in range(5):
         if count_bingo >= 3:
             print(count)
             exit()
+
+
+
+
+bingo_li = []
+col_li = []
+ans_li = []
+
+for i in range(10) :
+  if i < 5 :  
+    bingo_li.extend(list(map(int, input().rstrip().split())))
+  else : 
+    ans_li.extend(list(map(int, input().rstrip().split())))
+
+cnt = 0
+itr = 1
+for v in ans_li :
+  idx = bingo_li.index(v)
+  bingo_li[idx] = 0
+  d1_l1 = [bingo_li[0], bingo_li[6], bingo_li[12], bingo_li[18], bingo_li[24]]
+  d2_li = [bingo_li[4], bingo_li[8], bingo_li[12], bingo_li[16], bingo_li[20]]
+  
+  if not sum(bingo_li[5*(idx//5):5+5*(idx//5)]) :
+      cnt += 1
+  if not (bingo_li[idx%5] + bingo_li[(idx%5)+5] + bingo_li[(idx%5)+10] + bingo_li[(idx%5)+15] + bingo_li[(idx%5)+20]) :
+      cnt += 1
+  if sum(d1_l1) == 0 and idx in [0, 6, 12, 18, 24]:
+      cnt += 1
+  if sum(d2_li) == 0 and idx in [4, 8, 12, 16, 20]:
+      cnt += 1
+      
+  if cnt >= 3 :
+      print(itr)
+      exit()
+  itr += 1
