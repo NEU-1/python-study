@@ -14,7 +14,6 @@ for x in range(8):
                 print(i)
             exit()
 
-
 n = []
 result = []
 for i in range(9):
