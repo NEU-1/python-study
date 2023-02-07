@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../dayday/.idea/day.iml" filepath="$PROJECT_DIR$/../dayday/.idea/day.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/python 공부.iml" filepath="$PROJECT_DIR$/.idea/python 공부.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../싸피 수업/.idea/싸피 수업.iml" filepath="$PROJECT_DIR$/../싸피 수업/.idea/싸피 수업.iml" />
     </modules>
   </component>
 </project>
