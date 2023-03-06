@@ -1,0 +1,33 @@
+def check(N, broken):
+    for N in str(N):
+        if N in broken:
+            return False
+    return True
+
+def move(N, broken):
+    if N == 100: 
+        return 0
+    mn_cnt = abs(N - 100) 
+
+    for i in range(1000001):
+        if check(i, broken):
+            cnt = abs(N - i) + len(str(i))
+            if cnt < mn_cnt:
+                mn_cnt = cnt
+    return mn_cnt
+
+N = int(input()) 
+M = int(input()) 
+
+if M == 0: 
+    print(min(len(str(N)), abs(N - 100)))
+
+else:
+    broken = list(input().split())
+    if len(broken) == 10:
+        print(N-100)
+    else:
+        for i in range(1000001):
+            if check(i, broken):
+                print(min(len(str(i)) + abs(i - N), move(N, broken)))
+                break
